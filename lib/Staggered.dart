@@ -21,6 +21,7 @@ class app extends StatelessWidget{
                Image(image: AssetImage("assets/icons/instagram.png"),height: 150,width: 150,),
                Text("instagram"),
 
+
              ],),
              ),
            ),
