@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 void main(){
-  runApp(MaterialApp(home: app(),));
+  runApp(MaterialApp(home: app(),
+  debugShowCheckedModeBanner: false,));
 }
 class app extends StatelessWidget{
   @override
@@ -28,17 +29,36 @@ class app extends StatelessWidget{
            StaggeredGridTile.count(
              crossAxisCellCount: 2,
              mainAxisCellCount: 2,
-             child: Container(child: Text(""),color: Colors.orange,),
+             child: Container(color: Colors.blue,child:Column(children: [
+               Image(image: AssetImage("assets/icons/Designbolts-Rio-2-Movie-Rio2-Family.512.png"),
+                 height: 150,width: 150,),
+               Text("Family"),
+
+             ],),),
            ),
            StaggeredGridTile.count(
-             crossAxisCellCount: 2,
+             crossAxisCellCount: 1,
              mainAxisCellCount: 2,
-             child: Container(child: Text(""),color: Colors.green,),
+             child: Container(color: Colors.grey,
+               child: Column(
+                 children: [
+                   Image(image: AssetImage("assets/icons/Iconarchive-Dog-Breed-Golden-Retriever.512.png"),height: 150,width: 150,),
+                   Text("Dog")
+                 ],
+               ),
+             ),
            ),
            StaggeredGridTile.count(
-             crossAxisCellCount: 2,
+             crossAxisCellCount: 1,
              mainAxisCellCount: 2,
-             child: Container(child: Text(""),color: Colors.brown,),
+             child: Container(color: Colors.brown,
+                 child:Column(
+               children: [
+                 Image(image: AssetImage("assets/icons/Aha-Soft-Food-Burger.256.png"),height: 150,width: 150,fit: BoxFit.fill,),
+                 Text("Burger"),
+
+               ],
+             )),
            ),
        
        
