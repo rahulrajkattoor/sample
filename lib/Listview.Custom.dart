@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-void main(){
-  runApp(MaterialApp(home: listviewcustom(),
-  debugShowCheckedModeBanner: false,));
-}
+
+
 class listviewcustom extends StatelessWidget {
   var name = ["rahul", "rajesh", "beena"];
   var phone = ["2255", "3344", "4567"];

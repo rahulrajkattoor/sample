@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-void main(){
-  runApp(MaterialApp(home: listseperator(),));
-}
+
+
 class listseperator extends StatelessWidget{
   var title=["rahul","arjun"];
   var phone=["2255","5522"];

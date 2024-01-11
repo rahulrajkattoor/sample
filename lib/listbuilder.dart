@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-void main(){
-  runApp(MaterialApp(home: listbuilder(),));
-}
+
 class listbuilder extends StatelessWidget{
   var title=["rahul","arjun"];
   var phone=["2255","5522"];
