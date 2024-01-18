@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: example1(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -14,8 +15,15 @@ class example1 extends StatelessWidget {
       body: Stack(children: [
         Container(
           color: Colors.white,
+         
+         child: Padding(padding: EdgeInsets.only(bottom: 200,left: 0),
+         child: Center(child: Text("Rio Family",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w800),)),),
 
-        ),
+
+
+          ),
+
+
 
 
         Container(
@@ -31,10 +39,10 @@ class example1 extends StatelessWidget {
           width: 100,
           child: ClipRRect(
             borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(70),
-                bottomLeft: Radius.circular(70),
+                bottomRight: Radius.circular(100),
+                bottomLeft: Radius.circular(100),
                 topRight: Radius.circular(70),
-                topLeft: Radius.circular(70)),
+                topLeft: Radius.circular(70),),
             child: Container(
               color: Colors.blueAccent,
               child: CircleAvatar(
