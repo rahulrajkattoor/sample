@@ -17,6 +17,7 @@ class ui extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
+
           SliverAppBar(
             backgroundColor: Colors.deepPurpleAccent,
             floating: true,
