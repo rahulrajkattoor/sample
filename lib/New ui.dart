@@ -5,6 +5,14 @@ void main(){
   runApp(MaterialApp(home: newui(),
   debugShowCheckedModeBanner: false,));
 }
+final List rooms=[
+  {
+    "image":"assets/icons/room 1.jpg",
+    "title":"Awesome room near Kakkanad"
+  },
+
+
+];
 class newui extends StatelessWidget{
 
 
@@ -57,7 +65,11 @@ class newui extends StatelessWidget{
           SliverToBoxAdapter(child: SizedBox(height: 15,width: 30,),),
          SliverToBoxAdapter(
            child: buildcategories(),
-         )
+         ),
+         SliverList(delegate: SliverChildBuilderDelegate((context,index){
+           return buildrooms(context,index);
+
+    },childCount: 10)
 
 
 
@@ -67,7 +79,7 @@ class newui extends StatelessWidget{
 
 
 
-       ]));
+         )]));
   }
 
   buildcategories() {
@@ -86,6 +98,62 @@ class newui extends StatelessWidget{
         ],
       ),
     );
+  }
+
+  Widget buildrooms(BuildContext context, int index) {
+    var room=rooms[index % rooms.length];
+    return Container(
+      margin: EdgeInsets.all(20),
+      child: ClipRRect(
+        child: Material(
+          elevation: 5,
+          borderRadius: BorderRadius.circular(5.0),
+          color: Colors.greenAccent,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Stack(
+                children:[
+                  Image.asset(room['image']),
+              Positioned(right: 10,top: 10,
+
+                  child: Icon(Icons.star,color: Colors.grey.shade800,size: 20,)),
+              Positioned(bottom: 20,
+                  right: 20,
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.white,
+                    child: Text("\$40"),
+                  ))]),
+              Container(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(room['title'],style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                    SizedBox(height: 5,),
+                    Text("Kakkanad Kochi"),
+                    SizedBox(height: 10,),
+                    Row(
+                      children: [
+                        Icon(Icons.star,color: Colors.green,),
+                        Icon(Icons.star,color: Colors.green,),
+                        Icon(Icons.star,color: Colors.green,),
+                        Icon(Icons.star,color: Colors.green,),
+                        Icon(Icons.star,color: Colors.green,),
+                        SizedBox(width: 5,),
+                        Text("(220 reviews)",style: TextStyle(color: Colors.grey),)
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+
   }
 
 }
