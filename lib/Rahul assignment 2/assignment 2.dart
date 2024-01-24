@@ -10,21 +10,16 @@ class assignment extends StatefulWidget{
 }
 
 class _assignmentState extends State<assignment> {
-var image=["assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
-  "assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
-"assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
-"assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
-"assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
-"assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png","assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png"
-      "assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
-"assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png","assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png"];
 
 var title=["achu","raju","sheeja","afin","Riya","Adhith","Athul","Rajesh","kiran","Hari"];
 
 var subtitle=["Have a good day","Nice day","Good morning","welcome","Hi","Hello","Good evening","Goodmorning","hello","hi"];
 var trailing=["Tuseday","Today","Yesterday","28 jan","30 jan","Today","yesterday","24 march","25 jun","yesterday"];
+var screen=["Hi","Hi","Hi","Hi","Hi","Hi","Hi","Hi","HI"
 
-var index=0;
+  
+];
+int index=0;
 
   @override
   Widget build(BuildContext context) {
@@ -71,14 +66,18 @@ var index=0;
 
             ),
             SliverList(delegate: SliverChildBuilderDelegate((context,index){
-              return Container(
-                child: ListTile(
-                  leading: CircleAvatar(backgroundImage: AssetImage(image[index]),),
-                  title: Text(title[index]),
-                  subtitle: Text(subtitle[index]),
-                  trailing: Text(trailing[index]),
-                ),
-              );
+              return ExpansionTile(title: Text(title[index]),
+              subtitle: Text(subtitle[index]),
+              trailing: Text(trailing[index]),
+              leading: CircleAvatar(backgroundImage: AssetImage("assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png"),),
+
+              children: [
+                ListTile(
+                  title: Text(screen[index]),
+                  ),
+                
+              ],);
+
     },childCount: 9)
             )],
         ),
