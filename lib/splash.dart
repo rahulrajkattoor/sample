@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sample/home.dart';
+import 'package:sample/registration.dart';
 void main(){
   runApp(MaterialApp(home: splshnew(),));
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-void main()
+/*void main()
 {
   runApp(MaterialApp(home: homescreen(),
   debugShowCheckedModeBanner: false,));
-}
+}*/
 class homescreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
