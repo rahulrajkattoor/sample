@@ -4,19 +4,22 @@
 import 'package:flutter/material.dart';
 import 'package:sample/dummy%20products/product%20list.dart';
 import 'package:sample/dummy%20products/productdetails.dart';
+import 'package:sample/login%20with%20ecomerce.dart';
+
+
 
 void main(){
-  runApp(MaterialApp(home:Mainscreen() ,
+  runApp(MaterialApp(home:splash1(),
     routes:{
       'secondpage': (context) =>productdetils()},));
 }
 
-class Mainscreen extends StatefulWidget{
+class Mainscreen1 extends StatefulWidget{
   @override
-  State<Mainscreen> createState() => _MainscreenState();
+  State<Mainscreen1> createState() => _MainscreenState();
 }
 
-class _MainscreenState extends State<Mainscreen> {
+class _MainscreenState extends State<Mainscreen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
