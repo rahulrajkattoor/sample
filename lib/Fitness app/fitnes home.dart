@@ -30,7 +30,7 @@ class fitneshome extends StatelessWidget {
                      height: 200,width: 300,
                    ),
                  ),
-                 Text("Good food ensure your health",style: TextStyle(color: Colors.black),)
+
                  
                ],)
                 
