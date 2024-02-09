@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/Fitness%20app/fitnes%20home.dart';
@@ -29,10 +27,10 @@ class _loginpageState extends State<loginpage> {
         Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/icons/Man-Fitness-Wallpaper-HD.jpg"),
-                fit: BoxFit.cover,),
+              image: AssetImage("assets/icons/Man-Fitness-Wallpaper-HD.jpg"),
+              fit: BoxFit.cover,
+            ),
           ),
-
         ),
         Container(
           color: Colors.white24,
@@ -82,7 +80,8 @@ class _loginpageState extends State<loginpage> {
                     obscuringCharacter: "*",
                     decoration: InputDecoration(
                         iconColor: Colors.white,
-                        suffixIcon: IconButton(color: Colors.white,
+                        suffixIcon: IconButton(
+                          color: Colors.white,
                           onPressed: () {
                             setState(() {
                               if (showpass) {
