@@ -37,14 +37,12 @@ class _splashState extends State<splash> {
         child: Column(
           children: [
             SizedBox(height: 100,width: 300,),
-            Center(child: Image(image: AssetImage("assets/SVG/splash screen image.png"),width: 300,)),
+            Center(child: ClipRRect(borderRadius: BorderRadius.circular(15),
+                child: Image(image: AssetImage("assets/SVG/3663875.jpg"),width: 300,))),
             SizedBox(height: 20,),
             Text("Its time to change",style: TextStyle(fontSize: 40,fontWeight: FontWeight.w500),),
             SizedBox(height: 60,),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red,),
-
-                onPressed: (){}, child: Text("Start ",style: TextStyle(color: Colors.white),))
+            
           ],
         ),
       ),
