@@ -1,6 +1,6 @@
-import 'dart:async';
 
-import 'package:sample/Sqflite%20database/sqfl%20helper.dart';
+
+import 'package:sample/Sql%20data%20base%20login/sqfl%20helper.dart';
 import 'package:sqflite/sqflite.dart' as sql;
 
 class sqlHelper{
@@ -38,5 +38,23 @@ class sqlHelper{
       return data;
     }
     return data;
+  }
+  
+  static Future<List<Map>>checklogin(String email,String password)async{
+    final db=await sqlHelper.dataBase1();
+    final data=await db.rawQuery("SELECT * FROM registration WHERE name=='$email'&& password=='$password'");
+    if(data.isNotEmpty){
+      return data;
+    }
+    return data;
+  }
+   static Future<List<Map>>getAll()async{
+    final db=await sqlHelper.dataBase1();  
+    final data=db.rawQuery("SELECT * registration");
+    return data;
+  }
+  static Future<void>deleteuser(int id)async{
+    final db=await sqlHelper.dataBase1();
+    db.delete('registration',where: 'id:?',whereArgs: [id]);
   }
 }
