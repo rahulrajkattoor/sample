@@ -7,7 +7,7 @@ class chatpage extends StatelessWidget{
   var image=["assets/icons/indoor-picture-handsome guy.jpg","assets/icons/team padi.png","assets/icons/whatsapp unknown image.jpg","assets/icons/RDJ.jpg",
   "assets/icons/Jack sparrow.jpg","assets/icons/Designbolts-Rio-2-Movie-Rio2-Family.512.png","assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png",
   "assets/icons/Man-Fitness-Wallpaper-HD.jpg","assets/icons/2150991457.jpg","assets/icons/animal-wildlife-word-with-giraffe-graphic.jpg","assets/icons/whatsapp unknown image.jpg"];
-  var trailing=["Today","Yesterday","1/1/2024","2/2/2024","Today","8/2/2025","Yesterday","10/4/2024","Today","Yesterday","12/2/2023"];
+  var trailing=["Today","Yesterday","1/1/2024","2/2/2024","Today","8/2/2024","Yesterday","10/4/2024","Today","Yesterday","12/2/2023"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

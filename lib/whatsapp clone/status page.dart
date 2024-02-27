@@ -63,7 +63,7 @@ class status extends StatelessWidget{
              SizedBox(height: 25,),
              ListTile(
                leading: CircleAvatar(backgroundImage: AssetImage("assets/icons/Custom-Icon-Design-Pretty-Office-2-Man.256.png"),radius: 27,),
-               title: Text("Manager"),
+               title: Text("Boss"),
              ),
              SizedBox(height: 25,),
              ListTile(
