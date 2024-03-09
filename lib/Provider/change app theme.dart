@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sample/app.dart';
 
 import 'Controller/theme controller.dart';
 
@@ -31,8 +32,10 @@ class App_Theme_changer extends StatelessWidget {
             onPressed: () {
               Provider.of<ThemeProvider>(
                   context, listen: false).switchTheme();
+
             },
             child: Text("Switch Thme")),
+
       ),
     );
   }

@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+void main()=>
+  runApp(MaterialApp(home: drop(),));
+
 List<String>list=['one','two','three','four'];
 class drop extends StatefulWidget{
+  const drop({super.key});
+
   @override
   State<drop> createState() => _dropState();
 }
@@ -25,7 +30,11 @@ class _dropState extends State<drop> {
              dropdownvalue=value!;
            });
           },
-         items: list.map<DropdownMenuItem<String>>,
+         items: list.map<DropdownMenuItem<String>>((String drop){
+           return DropdownMenuItem(
+             value: dropdownvalue,
+               child: Text(drop));
+         }).toList(),
 
        ));
   }
