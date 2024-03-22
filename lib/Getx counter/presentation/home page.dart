@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
             ),
             Obx(
                   () => Text(
-                '${countController.obxCount}',
+                '${countController.obs}',
                 style: const TextStyle(fontSize: 48.0),
               ),
             ),
