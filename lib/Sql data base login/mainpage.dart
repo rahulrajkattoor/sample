@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/Sql%20data%20base%20login/sqfl%20helper.dart';
 void main(){
-  runApp(MaterialApp(home: mainsql(),));
+  runApp(MaterialApp(home: mainsql(),debugShowCheckedModeBanner: false,));
 }
 class mainsql extends StatefulWidget {
   @override
